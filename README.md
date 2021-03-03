@@ -1,0 +1,1 @@
+Ongoing project for The Odin Project located at https://www.theodinproject.com/courses/ruby-on-rails/lessons/associations
