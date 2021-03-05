@@ -1,0 +1,13 @@
+<%= form_with model: @event do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_area :name %><br>
+    <% @event.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
