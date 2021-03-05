@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'events/new'
+  get 'events/show'
+  get 'events/index'
+  get 'events/create'
   root to: "users#new"
   resources :users, only: [:new, :create, :show]
   get 'login', to: 'sessions#new'   
