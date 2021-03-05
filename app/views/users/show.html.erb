@@ -1,9 +1,4 @@
 <br><br><br><br><br><br><br><br><br>
-<% if logged_in? %>    
-  <h1>You are Logged In, <%= current_user.name %></h1>
-<% else %>
-  <h1>You are not Logged In</h1>
-<%end%>
 
 <%= button_to "Login", '/login', method: :get%>
 
