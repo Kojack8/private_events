@@ -1,6 +1,8 @@
 <br><br><br>
 
-<% @user.event_id %>
+<% @user.events.each do |event| %>
+  <%= event.title %> <br>
+<% end %>
 
 
 <br><br><br><br><br><br><br><br><br>

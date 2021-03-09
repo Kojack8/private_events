@@ -17,7 +17,6 @@ class EventsController < ApplicationController
     if @event.save
       redirect_to :action => 'show', :id => @event.id
     else
-      p @event.errors
       render :new
     end
   end
