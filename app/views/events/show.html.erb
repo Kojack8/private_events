@@ -1,1 +1,9 @@
 <h1> <%= @event.title %> </h1>
+
+<p>
+  <%= button_to "RSPV" %>
+
+  <% @event.attendees.each do |attendee| %>
+    <%= attendee %>
+  <% end %>
+</p>
