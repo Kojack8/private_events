@@ -13,15 +13,17 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(post_params)
+    @event.user_id = session[:user_id]
     if @event.save
-      redirect_to :action => 'show', :id => session[:user_id]
+      redirect_to :action => 'show', :id => @event.id
     else
+      p @event.errors
       render :new
     end
   end
 
   private
   def post_params
-    params.require(:event).permit(:name)
+    params.require(:event).permit(:title)
   end
 end
