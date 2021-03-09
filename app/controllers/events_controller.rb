@@ -13,10 +13,6 @@ class EventsController < ApplicationController
 
   def create
     @event = current_user.events.build(event_params)
-    p @event
-    p @event.errors
-    #@event = Event.new(post_params)
-    #@event.user_id = session[:user_id]
     if @event.save
       redirect_to :action => 'show', :id => @event.id
     else
@@ -24,14 +20,6 @@ class EventsController < ApplicationController
     end
   end
 
-  def rsvp
-    @event = Event.find(params[:id])
-    if @event.attendees.include?(current_user)
-      redirect_to @event, notice: "You are already on the list"
-    else
-      @event.attendees << current_user
-      redirect_to @event
-    end
   
   end
 

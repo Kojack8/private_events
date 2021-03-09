@@ -1,7 +1,7 @@
 <h1> <%= @event.title %> </h1>
 
 <p>
-  <%= button_to "RSVP"  %>
+  <%= button_to "RSVP", action: "create", controller: "participation" %>
   
 
   <% @event.attendees.each do |attendee| %>
