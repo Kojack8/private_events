@@ -1,7 +1,9 @@
 <h1> <%= @event.title %> </h1>
 
 <p>
-  <%= button_to "RSVP", action: "create", controller: "participation" %>
+  
+  <%= link_to "RSVP", participation_path(participation: { event_id: @event.id, user_id: session[:user_id] }), method: :create %>
+    
   
 
   <% @event.attendees.each do |attendee| %>

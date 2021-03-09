@@ -6,9 +6,6 @@ class ApplicationController < ActionController::Base
     User.find_by(id: session[:user_id])  
   end
 
-  def current_event        
-    Event.find_by(id: session[:event_id])  
-  end
 
   def logged_in?
     !current_user.nil?  

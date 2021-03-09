@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: "users#new"
   resources :users, only: [:new, :create, :show]
   resources :events, only: [:new, :create, :index, :show]
-  resources :participation, only: [:create, :show]
+  resources :participation, only: [:new, :create, :edit, :show]
   get 'login', to: 'sessions#new'   
   post 'login', to: 'sessions#create'
 
