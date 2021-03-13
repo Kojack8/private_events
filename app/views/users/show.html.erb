@@ -1,7 +1,7 @@
 <br><br><br>
 
 <% @user.events.each do |event| %>
-  <%= event.title %> <br>
+  <%= link_to event.title, event_path %> <br>
 <% end %>
 
 
