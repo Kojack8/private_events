@@ -2,11 +2,11 @@
 
 <p>
   
-  <%= link_to "RSVP", participation_path, method: :new %>
+  <%= link_to "RSVP", rsvp_event_path %>
     
   
 
   <% @event.attendees.each do |attendee| %>
-    <%= attendee %>
+    <%= attendee.name %>
   <% end %>
 </p>

@@ -4,6 +4,11 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create, :show]
   resources :events, only: [:new, :create, :index, :show]
   resources :participation, only: [:new, :create, :show]
+  resources :events do
+    member do
+      get 'rsvp'
+    end
+  end
   get 'login', to: 'sessions#new'   
   post 'login', to: 'sessions#create'
 
