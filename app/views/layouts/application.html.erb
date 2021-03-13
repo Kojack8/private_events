@@ -13,6 +13,7 @@
   <body>
   <% if logged_in? %>    
     <h1>You are Logged In, <%= current_user.name %></h1>
+    <%= link_to 'New Event', new_event_path %>
   <% else %>
     <h1>You are not Logged In</h1>
   <%end%>
