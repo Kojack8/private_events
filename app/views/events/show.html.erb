@@ -2,7 +2,7 @@
 
 <p>
   
-  <%= link_to "RSVP", participation_path(participation: { event_id: @event.id, user_id: session[:user_id] }), method: :create %>
+  <%= link_to "RSVP", participation_path, method: :new %>
     
   
 
