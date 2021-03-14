@@ -1,9 +1,18 @@
 <h1>New User</h1>
 
-<%= render "form", article: @users %>
+<body>
+<% if logged_in? == false %>
+  <%= render "form", article: @users %>
 
-<br> <body>
-Or sign-in with an existing username
+  <br> 
+  Or sign-in with an existing username
+
+  <%= render "signin", article: @users %> 
+<% else %>
+  <%= button_to 'Log Out', logout_path, method: :delete %>
+
+<% end %>
+
+
 </body>
-<%= render "signin", article: @users %>
 
