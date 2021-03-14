@@ -2,26 +2,20 @@
 <br><br><br>
 
 Upcoming Events (Host):
-<% @user.events.each do |event| %>
-  <% if event.time.future?%>
-    <%= link_to event.title, event_path %> 
-  <% end %>
+<% @user.events.upcoming.each do |event| %>
+  <%= link_to event.title, event_path %> 
 <% end %>
 <br>
 
 Upcoming Events (Guest):
-<% @user.attended_events.each do |event| %>
-  <% if event.time.future? %>
-    <%= link_to event.title, event_path %> 
-  <% end %>
+<% @user.attended_events.upcoming.each do |event| %>
+  <%= link_to event.title, event_path %> 
 <% end %>
 <br>
 
 Past Events (Guest):
-<% @user.attended_events.each do |event| %>
-  <% if event.time.past? %>
-    <%= link_to event.title, event_path %> <br>
-  <% end %>
+<% @user.attended_events.past.each do |event| %>
+  <%= link_to event.title, event_path %> <br>
 <% end %>
 
 

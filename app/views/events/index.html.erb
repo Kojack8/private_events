@@ -2,7 +2,16 @@
 
 <p>
   
-  <% @events.each do |event| %>
+  Upcoming Events:
+  <br>
+  <% @events.upcoming.each do |event| %>
+    <%= link_to event.title, event_path(event) %>
+    <br>
+  <% end %>
+  <br>
+  Past Events:
+  <br>
+  <% @events.past.each do |event| %>
     <%= link_to event.title, event_path(event) %>
     <br>
   <% end %>
