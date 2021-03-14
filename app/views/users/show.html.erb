@@ -1,7 +1,27 @@
+<body>
 <br><br><br>
 
+Upcoming Events (Host):
 <% @user.events.each do |event| %>
-  <%= link_to event.title, event_path %> <br>
+  <% if event.time.future?%>
+    <%= link_to event.title, event_path %> 
+  <% end %>
+<% end %>
+<br>
+
+Upcoming Events (Guest):
+<% @user.attended_events.each do |event| %>
+  <% if event.time.future? %>
+    <%= link_to event.title, event_path %> 
+  <% end %>
+<% end %>
+<br>
+
+Past Events (Guest):
+<% @user.attended_events.each do |event| %>
+  <% if event.time.past? %>
+    <%= link_to event.title, event_path %> <br>
+  <% end %>
 <% end %>
 
 
@@ -10,3 +30,5 @@
 <%= button_to "Login", '/login', method: :get%>
 
 <%= button_to "Sign Up", '/users/new', method: :get%>
+
+</body>
