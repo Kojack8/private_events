@@ -1,7 +1,11 @@
 <h1> <%= @event.title %> </h1>
 
 <p>
-  
+  <% if @event.host == current_user %>
+    <%= render "invite", article: @events %>
+  <% end %>
+
+
   <%= link_to "RSVP", rsvp_event_path %>
     
   <br> Hosted by: <br>

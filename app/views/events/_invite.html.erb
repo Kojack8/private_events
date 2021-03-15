@@ -1,0 +1,13 @@
+<%= form_with model: @event do |form| %>
+  <div>
+    <%= form.label "Invite User" %><br>
+    <%= form.text_field :invitee %><br>
+    <% @event.errors.full_messages_for(:invitee).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

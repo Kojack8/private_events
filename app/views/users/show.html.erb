@@ -9,7 +9,6 @@ Upcoming Events (Host): <br>
 
 Upcoming Events (Guest): <br>
 <% @user.attended_events.upcoming.each do |event| %>
-
   <%= link_to event.title, event_path(event) %> <br>
 <% end %>
 <br>
@@ -19,11 +18,5 @@ Past Events (Guest): <br>
   <%= link_to event.title, event_path(event) %> <br>
 <% end %>
 
-
-<br><br><br><br><br><br><br><br><br>
-
-<%= button_to "Login", '/login', method: :get%>
-
-<%= button_to "Sign Up", '/users/new', method: :get%>
 
 </body>

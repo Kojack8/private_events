@@ -7,8 +7,7 @@
       <li><%= link_to 'New Event', new_event_path, method: :get %></li>
       <li><%= link_to 'Log Out', logout_path, method: :delete %></li>
     <% else %>
-      <li>You are not Logged In</li>
-      <li><%= link_to 'Log In', login_path, method: :get %></li>
+      <li><%= link_to 'You are not Logged In', login_path, method: :get %></li>
     <%end%>
   </ul>
 </div>
