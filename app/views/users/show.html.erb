@@ -1,21 +1,22 @@
 <body>
 <br><br><br>
 
-Upcoming Events (Host):
+Upcoming Events (Host): <br>
 <% @user.events.upcoming.each do |event| %>
-  <%= link_to event.title, event_path %> 
+  <%= link_to event.title, event_path(event) %> <br>
 <% end %>
 <br>
 
-Upcoming Events (Guest):
+Upcoming Events (Guest): <br>
 <% @user.attended_events.upcoming.each do |event| %>
-  <%= link_to event.title, event_path %> 
+
+  <%= link_to event.title, event_path(event) %> <br>
 <% end %>
 <br>
 
-Past Events (Guest):
+Past Events (Guest): <br>
 <% @user.attended_events.past.each do |event| %>
-  <%= link_to event.title, event_path %> <br>
+  <%= link_to event.title, event_path(event) %> <br>
 <% end %>
 
 

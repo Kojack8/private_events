@@ -4,9 +4,12 @@
   
   <%= link_to "RSVP", rsvp_event_path %>
     
-  
+  <br> Hosted by: <br>
+  <%= @event.host.name %> <br>
 
+
+  <br> Attending: <br>
   <% @event.attendees.each do |attendee| %>
-    <%= attendee.name %>
+    <%= attendee.name %><br>
   <% end %>
 </p>
