@@ -1,0 +1,11 @@
+<div id = 'navbar'>
+    <ul>
+      <% if logged_in? %>    
+        <li>You are Logged In, <%= current_user.name %></li>
+        <li><%= button_to 'New Event', new_event_path, method: :get %></li>
+        <li><%= button_to 'Log Out', logout_path, method: :delete %></li>
+      <% else %>
+        You are not Logged In
+      <%end%>
+    </ul>
+  </div>
