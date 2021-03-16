@@ -8,6 +8,8 @@
   Or sign-in with an existing username
 
   <%= render "signin", article: @users %> 
+<% else %> 
+  <%= "You are already signed in as #{current_user.name}. You must sing out to create a new user name."%>
 
 <% end %>
 
