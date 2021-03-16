@@ -1,4 +1,4 @@
-Event.find_or_create_by(title: "Dad\'s birthday day Party") do |e|
+Event.find_or_create_by(title: "Dad\'s birthday Party") do |e|
   e.time = "2021-05-01 18:30:00.000000000 +0000"
   e.user_id = 1
 end

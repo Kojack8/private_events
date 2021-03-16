@@ -3,7 +3,7 @@
     <%= form.label :title %><br>
     <%= form.text_area :title %><br>
     <%= form.label :time %><br>
-    <%= form.datetime_select :time %><br>
+    <%= form.datetime_select :time %><br> 
     <% @event.errors.full_messages_for(:title).each do |message| %>
       <div><%= message %></div>
     <% end %>
