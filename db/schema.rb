@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_15_193032) do
+ActiveRecord::Schema.define(version: 2021_03_09_070803) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,8 +21,6 @@ ActiveRecord::Schema.define(version: 2021_03_15_193032) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id", null: false
-    t.bigint "invitees_id"
-    t.index ["invitees_id"], name: "index_events_on_invitees_id"
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 
@@ -49,7 +47,6 @@ ActiveRecord::Schema.define(version: 2021_03_15_193032) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "events", "events", column: "invitees_id"
   add_foreign_key "events", "users"
   add_foreign_key "participations", "events"
   add_foreign_key "participations", "users"
