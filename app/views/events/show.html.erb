@@ -5,15 +5,21 @@
     <%= "You are hosting this event, #{@event.host.name}" %> <br>
   <% end %>
 
-
-  <%= link_to "RSVP", rsvp_event_path %>
-    
-  <br> Hosted by: <br>
-  <%= @event.host.name %> <br>
-
-
-  <br> Attending: <br>
-  <% @event.attendees.each do |attendee| %>
-    <%= attendee.name %><br>
-  <% end %>
+  <div class = 'event_block'>
+     <div class = 'event_block_small'>
+      <%= link_to "RSVP", rsvp_event_path %>
+      <br> Hosted by: <br>
+      <%= @event.host.name %> <br>
+    </div>
+  </div>
+  <br>
+  <div class = 'event_block'>
+    Attending: <br>
+     <div class = 'event_block_small'>
+      <% @event.attendees.each do |attendee| %>
+        <%= attendee.name %><br>
+      <% end %>
+    </div>
+    <br>
+  </div>
 </p>
