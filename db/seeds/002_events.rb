@@ -43,7 +43,7 @@ Event.find_or_create_by(title: "Mother-Daughter Seminar ") do |e|
   e.user_id = 8
 end
 
-Event.find_or_create_by(title: "Boy's For Now Concert ") do |e|
+Event.find_or_create_by(title: "Boyz4Now concert ") do |e|
   e.time = "2021-12-01 19:00:00.000000000 +0000"
   e.user_id = 1
 end
