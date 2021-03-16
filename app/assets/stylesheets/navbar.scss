@@ -3,29 +3,34 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #9ac7e8;
+  font-weight: bold;
+  border: 2px solid black;
+  outline: #4d6374 solid 4px;
 }
 
 li {
   float: right;
   display: block;
-  color: white;
+  color: #f0262a;
   text-align: center;
   text-decoration: none;
   padding: 14px 16px;
+  border-left: 2px solid #2e3b45;
 }
 
 li a {
   display: block;
-  color: white;
+  color: #f0262a;
   text-align: center;
   text-decoration: none;
 }
 
 li a:hover {
-  background-color: #111;
+  background-color: #7b9fb9;
 }
 
 .navbar_left{
   float: left;
+  border: none;
 }
