@@ -2,7 +2,7 @@
 
 <p>
   <% if @event.host == current_user %>
-    <%= render "invite", article: @events %>
+    <%= "You are hosting this event, #{@event.host.name}" %> <br>
   <% end %>
 
 
