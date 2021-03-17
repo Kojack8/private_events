@@ -1,13 +1,58 @@
-# Private Events 
+# Private Events
+
+## Overview
+
+This project primarily involves the use of active record associations to build and maintain, "a site similar to a private Eventbrite which allows users to create events and then manage user signups. Users can create events and send invitations and parties. Events take place at a specific date.
+It was created for The Odin Project's "Project: Associations" featured here: https://www.theodinproject.com/courses/ruby-on-rails/lessons/associations
+***
+## Live Demo
+
+You can try it out [here](https://frozen-dawn-77692.herokuapp.com)  
+Heroku is (in this case) a complimentary service and it may take up to thirty seconds to start a dyno. 
+___Thank you for your patience.___
+
+Sign up using any new username. There is no password authentication.
+
+## Screenshots 
+
+<img src="./app/assets/images/screenshot_001.png" width="400">
+<img src="./app/assets/images/screenshot_002.png" width="400">
+<img src="./app/assets/images/screenshot_003.png" width="400">
 
 
-## Summary
 
-" A site similar to a private Eventbrite which allows users to create events and then manage user signups. Users can create events and send invitations and parties. Events take place at a specific date and at a location."
 
-“This is part of the Forms Project in The Odin Project’s Ruby on Rails Curriculum. Find it at https://www.theodinproject.com/lessons/associations”
+***
+## Installation 
 
-## Requirements
--Rails
--Git
+Clone the repo to your local machine: 
+```ruby
+$ git clone https://github.com/Kojack8/private_events
+```
+Navigate to the directory containing that repo:
+```ruby
+$ cd private_events/
+```
+Install the needed gems:
+```ruby
+$ bundle install
+```
+Install webpacker:
+```
+$ rails webpacker:install
+```
+Migrate the database:
+```ruby
+$ rails db:migrate
+```
+Finally, on root path run a local server:
+```ruby
+$ rails s
+```
+Open browser to view application:
+```ruby
+localhost:3000
+```
+
+
 
