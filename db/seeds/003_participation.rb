@@ -157,3 +157,7 @@ Participation.find_or_create_by(id: 32) do |e|
   e.user_id = 9
   e.event_id = 11
 end
+
+ActiveRecord::Base.connection.tables.each do |t|
+  ActiveRecord::Base.connection.reset_pk_sequence!(t)
+end
