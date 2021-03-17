@@ -10,10 +10,15 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(post_params)
-    if @user.save
-      session[:user_id] = @user.id
-      redirect_to :action => 'show', :id => session[:user_id]
+    if User.where(:name => @user.name).blank?
+      if @user.save
+        session[:user_id] = @user.id
+        redirect_to :action => 'show', :id => session[:user_id]
+      else
+        render :new
+      end
     else
+      flash[:alert] = "A user already exists with this name."
       render :new
     end
   end

@@ -47,3 +47,6 @@ body {
   margin: auto;
 }
 
+.flash_alert{
+  color: red;
+}

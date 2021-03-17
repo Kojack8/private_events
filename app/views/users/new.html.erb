@@ -2,6 +2,11 @@
 
 <body>
 <% if logged_in? == false %>
+  <% flash.each do |type, msg| %>
+    <div class = 'flash_alert'>
+      <%= msg %>
+    </div>
+  <% end %>
   <%= render "form", article: @users %>
 
   <br> 
