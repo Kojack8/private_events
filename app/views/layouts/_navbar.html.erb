@@ -6,6 +6,7 @@
       <li><%= link_to 'Log Out', logout_path, method: :delete %></li>   
       <li>You are Logged In, <%= current_user.name %></li>
       <li><%= link_to 'All Events', events_path, method: :get%></li>
+      <li><%= link_to 'My Events', user_path(current_user), method: :get%></li>
       <li><%= link_to 'New Event', new_event_path, method: :get %></li>
     <% else %>
       <li><%= link_to 'You are not Logged In', login_path, method: :get %></li>

@@ -18,7 +18,7 @@ class UsersController < ApplicationController
         render :new
       end
     else
-      flash[:alert] = "A user already exists with this name."
+      flash.now[:alert] = "A user already exists with that name. Please try again."
       render :new
     end
   end

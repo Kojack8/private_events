@@ -1,4 +1,10 @@
-<h1>New Event</h1>
-
-<%= render "form", article: @events %>
-
+<% if logged_in? %>
+  <div class = 'event_block' style = 'padding: 10px;'>
+    <div class = 'event_block_small' style = 'padding: 10px'>
+      <div style = 'font-size: xx-large; font-weight: bold;'>
+        <%= 'New Event'%>
+      </div>
+      <%= render "form", article: @events %>
+    </div>
+  </div>
+<% end %>

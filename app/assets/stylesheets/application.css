@@ -29,14 +29,9 @@ body {
   font-size: large;
 }
 
-.title_block{
-
-}
-
-.hosted_block{
-}
-
-.time_block{
+textarea {
+  width: 450px;
+  height: 110px;
 }
 
 

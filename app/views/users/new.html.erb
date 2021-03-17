@@ -1,22 +1,35 @@
-<h1>New User</h1>
-
 <body>
+<br>
 <% if logged_in? == false %>
-  <% flash.each do |type, msg| %>
-    <div class = 'flash_alert'>
-      <%= msg %>
+  <div class = 'event_block' style = 'padding: 10px;'>
+    <div class = 'event_block_small'>
+      <div style = 'font-size: xx-large; font-weight: bold;'>
+        <%= 'New User'%>
+      </div>
+      <% flash.each do |type, msg| %>
+        <div class = 'flash_alert'>
+          <%= msg %>
+        </div>
+      <% end %>
+      <%= render "form", article: @users %>
     </div>
-  <% end %>
-  <%= render "form", article: @users %>
+  </div>
 
   <br> 
-  Or sign-in with an existing username
-
-  <%= render "signin", article: @users %> 
+  <div class = 'event_block' style = 'padding: 10px; width: 25%'>
+    <div class = 'event_block_small'>
+      Or sign-in with an existing username
+      <%= render "signin", article: @users %> 
+    </div>
+  </div>
 <% else %> 
-  <%= "You are already signed in as #{current_user.name}. You must sign out to create a new user name."%>
-  <%= button_to 'See All Events', events_path, method: :get %>
-  <%= button_to 'Log Out', logout_path, method: :delete %>
+  <div class = 'event_block' style = 'padding: 10px'>
+    <div class = 'event_block_small' style = 'padding: 10px'>
+      <%= "You are already signed in as #{current_user.name}. You must sign out to create a new user name."%>
+      <%= button_to 'See All Events', events_path, method: :get %>
+      <%= button_to 'Log Out', logout_path, method: :delete %>
+    </div>
+  </div>
 
 <% end %>
 
