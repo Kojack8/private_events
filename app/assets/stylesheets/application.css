@@ -16,6 +16,9 @@
 
 body {
   background-color: #fcdd60;
+  background-image: url('oceanavenue.webp');
+  background-repeat: no-repeat;
+  background-position: center top;
   font-family: Arial, Helvetica, sans-serif;
 }
 
